@@ -1,0 +1,83 @@
+
+<ion-content [fullscreen]="true" class="background">
+  <div class="card-input">
+    <ion-card>
+      <ion-card-header class="card-header">
+        <ion-img id="logo-img"
+          src="/assets/logo-removebg.png">
+        </ion-img>
+        <div style="margin-top: 40px;">
+          <ion-card-title id="title-head">Welcome Back!</ion-card-title>
+          <div style="display: flex; flex-direction: row;">
+            <ion-card-subtitle style="margin-right: 0.5rem;">Not a member yet?</ion-card-subtitle>
+            <ion-card-subtitle style="text-decoration: underline; color: blue; cursor: pointer;">Register now.</ion-card-subtitle>
+          </div>
+        
+        </div>  
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-input label="Username" labelPlacement="floating" placeholder="Enter username"></ion-input> <br>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Password" labelPlacement="floating" placeholder="Enter password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <div class="buttons">
+          <ion-button id="click-trigger" style="margin-right: 2%;">Forgot Password</ion-button>
+          <ion-button (click)="logMeIn()" style="width: 40%;">Login</ion-button>
+        </div>
+        <div>
+          <ion-popover trigger="click-trigger" triggerAction="click">
+            <ng-template>
+              <ion-content class="ion-padding">
+                <ion-list>
+                  <ion-item>
+                    <ion-input type="email" label="Email" labelPlacement="floating" placeholder="Enter username"></ion-input> <br>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input type="password" label="New Password" labelPlacement="floating" placeholder="Enter password"></ion-input>
+                  </ion-item>
+                </ion-list>
+                <ion-button style="margin: 5% 40%;" (click)="DismissClick()">Verify</ion-button>
+              </ion-content>
+            </ng-template>
+          </ion-popover>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="mail"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="alert-circle"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+
+    <ion-title style="font-size: 12px;">Found a Problem? Send a ticket now.</ion-title>
+      
+  </ion-toolbar>
+</ion-footer>

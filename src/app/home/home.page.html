@@ -1,0 +1,503 @@
+<ion-menu contentId="main-content"  style="--width: 25%;">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Contents</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-searchbar style="margin-bottom: 5%;"></ion-searchbar>
+    <ion-list>
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label>Trending topics</ion-label>
+        </ion-item-divider>
+        <ion-item button>
+          <ion-badge slot="end">13k</ion-badge>
+          <ion-label>Information Technology</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">10.5k</ion-badge>
+          <ion-label>Tech Skills</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">10.3k</ion-badge>
+          <ion-label>Most Powerful Programming Language</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">8.2k</ion-badge>
+          <ion-label>Networking</ion-label>
+        </ion-item>
+        <ion-item lines="none" button>
+          <ion-badge slot="end">7.8k</ion-badge>
+          <ion-label>IT Salary Rate</ion-label>
+        </ion-item>
+      </ion-item-group>
+    
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label>New Uploads</ion-label>
+        </ion-item-divider>
+        <ion-item button>
+          <ion-badge slot="end">620</ion-badge>
+          <ion-label>Wanted: Junior Programmer</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">603</ion-badge>
+          <ion-label>Python</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">588</ion-badge>
+          <ion-label>Is HTML/CSS Prog Language?</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">521</ion-badge>
+          <ion-label>Cisco 2023</ion-label>
+        </ion-item>
+        <ion-item lines="none" button>
+          <ion-badge slot="end">216</ion-badge>
+          <ion-label>IT Certificate</ion-label>
+        </ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label>All-time Favorite</ion-label>
+        </ion-item-divider>
+        <ion-item button>
+          <ion-badge slot="end">2M</ion-badge>
+          <ion-label>Bitcoin</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">1.8M</ion-badge>
+          <ion-label>Artificial Intelligence</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">1.4M</ion-badge>
+          <ion-label>Metaverse</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-badge slot="end">980k</ion-badge>
+          <ion-label>Hacking</ion-label>
+        </ion-item>
+        <ion-item lines="none" button>
+          <ion-badge slot="end">954k</ion-badge>
+          <ion-label>Coding</ion-label>
+        </ion-item>
+      </ion-item-group>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+
+    <ion-toolbar class="outside">
+      <ion-buttons slot="secondary">
+        <ion-menu-button style="color:#f8f2dc;"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button (click)="logOut()" fill="solid" class="logout">
+          Logout
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        <img src="/assets/logo-removebg.png" width="100px" style="display:inline-block; margin-top: 1rem;"/>
+      </ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+
+  <ion-content class="background">
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-card>
+            <ion-card-content>
+              <div style="margin-left: 35%; cursor: pointer;">
+                <ion-icon style="margin-right: 2rem;" size="large" id="messages" name="chatbubble"></ion-icon>
+                <ion-icon size="large" id="notifications" name="notifications"></ion-icon>
+              </div>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card>
+            <ion-card-header>
+              <ion-item lines="none">
+                <ion-icon slot="end" name="calendar-outline"></ion-icon>
+                <ion-card-title>Today</ion-card-title>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-card-subtitle>Make everyday matter.</ion-card-subtitle>
+              </ion-item>
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-datetime></ion-datetime>
+            </ion-card-content>
+          </ion-card>
+
+
+
+          
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card>
+            <ion-card-header>
+              <ion-item lines="none">
+                <ion-icon slot="end" name="desktop-outline"></ion-icon>
+                <ion-card-title>Contents Today</ion-card-title>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-card-subtitle>Top searched today: Information Technology</ion-card-subtitle>
+              </ion-item>
+            </ion-card-header>
+            <ion-searchbar style="width: 90%; margin-left: 5%;"></ion-searchbar>
+          
+            <ion-card-content>
+              <ion-list>
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/why-is-it-information-technology-great-career-choice.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>15 Reasons Why IT is a Great Career</h3>
+                    <p>https://www.floridacareercollege.edu/blog/why-the-information-technology-field-is-a-great-career-choice/</p>
+                  </ion-label>   
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/salary-IT.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Salary for Industry: Information Technology (IT) Services</h3>
+                    <p>https://www.payscale.com/research/PH/Industry=Information_Technology_(IT)_Services/Salary</p>
+                  </ion-label> 
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/information-tech.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>21 Different Types of IT Careers To Explore</h3>
+                    <p>https://www.indeed.com/career-advice/finding-a-job/types-of-it-jobs</p>
+                  </ion-label>
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/Skills-IT.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Important Skills for Information Technology (IT) Jobs</h3>
+                    <p>https://www.liveabout.com/list-of-information-technology-it-skills-2062410</p>
+                  </ion-label> 
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/Programming-Language-Popularity.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Top 20 Best Programming Languages To Learn in 2023</h3>
+                    <p>https://www.simplilearn.com/best-programming-languages-start-learning-today-article</p>
+                  </ion-label>  
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/College-IT.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>2023 Best Colleges for Information Technology in America</h3>
+                    <p>https://www.niche.com/colleges/search/best-colleges-for-information-technology/</p>
+                  </ion-label>
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/Information-Technology.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>What Is Information Technology?</h3>
+                    <p>https://www.comptia.org/content/articles/what-is-information-technology</p>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+
+              <ion-list *ngIf="loaded">
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/what-is-information-technology-scaled.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Why IT Fumbles Analytics</h3>
+                    <p>https://hbr.org/2013/01/why-it-fumbles-analytics</p>
+                  </ion-label>
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/larry-alton_1022_tile_250.png" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Eight Benefits of Seeking a Career in IT</h3>
+                    <p>https://www.isaca.org/resources/news-and-trends/isaca-now-blog/2021/</p>
+                  </ion-label>   
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/Fotolia_44986377.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>7 Advantages of Studying Information Technology</h3>
+                    <p>https://www.coursesonline.co.uk/7-advantages-of-studying-information-technology/</p>
+                  </ion-label> 
+                </ion-item>
+              </ion-list>
+
+              <ion-list *ngIf="!loaded">
+                <ion-item>
+                  <ion-thumbnail slot="start">
+                    <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </h3>
+                    <p>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </p>
+                  </ion-label>
+                </ion-item>
+
+                <ion-item>
+                  <ion-thumbnail slot="start">
+                    <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </h3>
+                    <p>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </p>
+                  </ion-label>   
+                </ion-item>
+                
+                <ion-item>
+                  <ion-thumbnail slot="start">
+                    <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </h3>
+                    <p>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </p>
+                  </ion-label>   
+                </ion-item>
+              </ion-list>
+
+              <ion-button class="load-more" (click)="loaded = !loaded" style="margin: 2% 40%;">Load more</ion-button>
+              
+
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="3">
+          <ion-card>
+            <ion-card-header>
+              <ion-item lines="none">
+                <ion-icon slot="end" name="person-outline"></ion-icon>
+                <ion-card-title>Your Profile</ion-card-title>
+              </ion-item>
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-accordion-group>
+                <ion-accordion value="first">
+                  <ion-item slot="header">
+                    <ion-label>Personal Information</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    <ion-item lines="none">
+                      <ion-icon name="id-card" slot="end"></ion-icon>
+                      <ion-label>Juan Dela Cruz</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="calendar-number" slot="end"></ion-icon>
+                      <ion-label>Born in July 2001</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="map" slot="end"></ion-icon>
+                      <ion-label>Lives at Batangas City</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="people" slot="end"></ion-icon>
+                      <ion-label>Member since 2020</ion-label>
+                    </ion-item>
+                    <ion-button fill="clear" (click)="goToUser()">Edit Personal Information</ion-button>
+                  </div>
+                </ion-accordion>
+
+                <ion-accordion value="second">
+                  <ion-item slot="header">
+                    <ion-label>Account Information</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    <ion-item lines="none">
+                      <ion-icon name="person-circle" slot="end"></ion-icon>
+                      <ion-label>@theJuan</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="call" slot="end"></ion-icon>
+                      <ion-label>0911-213-1111</ion-label>
+                    </ion-item> 
+                    <ion-item lines="none">
+                      <ion-icon name="mail" slot="end"></ion-icon>
+                      <ion-label>thejuan@gmail.com</ion-label>
+                    </ion-item> 
+                    <ion-item lines="none">
+                      <ion-icon name="send" slot="end"></ion-icon>
+                      <ion-label>Profile is visible to all</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="person-add" slot="end"></ion-icon>
+                      <ion-label>Profile can be added by anyone</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="lock-open" slot="end"></ion-icon>
+                      <ion-label>Profile lock is disabled</ion-label>
+                    </ion-item>
+                    <ion-button (click)="goToEditAccount()" fill="clear">Edit Account Information</ion-button>
+                  </div>
+                </ion-accordion>
+
+                <ion-accordion value="third">
+                  <ion-item slot="header">
+                    <ion-label>Settings</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    <ion-item lines="none">
+                      <ion-toggle>Dark Mode</ion-toggle>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-range labelPlacement="fixed" label-placement="start"
+                      aria-label="Range with ticks" [ticks]="true" [snaps]="true" [min]="0" [max]="5">
+                        <div slot="label">Music</div>
+                      </ion-range>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-range labelPlacement="fixed" label-placement="start">
+                        <div slot="label">Sound</div>
+                      </ion-range>
+                    </ion-item>
+                  </div>
+                </ion-accordion>
+              </ion-accordion-group>
+            </ion-card-content>
+
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-modal #modal trigger="messages" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-content>
+          <ion-searchbar placeholder="Search" (click)="modal.setCurrentBreakpoint(0.75)"></ion-searchbar>
+          <ion-list>
+            <ion-item button>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Connor Smith</h2>
+                <p>Sales Rep</p>
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Daniel Smith</h2>
+                <p>Product Designer</p>
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Greg Smith</h2>
+                <p>Director of Operations</p>
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Zoey Smith</h2>
+                <p>CEO</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <ion-modal #modal trigger="notifications" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+      <ng-template>
+        <ion-content>
+          <ion-list style="margin-top: 3rem;">
+            <ion-item button>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Connor Smith reposted your blog titled "Python is the #1 Language".</h2>
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Daniel Smith liked your comment.</h2>
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Greg Smith replied to your comment.</h2>
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-avatar slot="start">
+                <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Zoey Smith sent a friend request.</h2>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+  </ion-content>
+
+  
+</div>

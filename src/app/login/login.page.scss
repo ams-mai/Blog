@@ -1,0 +1,54 @@
+ion-content.background{
+    --background: url(../../assets/logo-bg3.png);
+}
+
+#logo-img {
+    width: 150px;
+}
+
+#title-head {
+    font-size: 35px;
+    color: #71697a;
+}
+
+ion-card {
+    --background: #ffffff;
+  }
+
+ion-card-title {
+    font-size: 25px;
+    --background: #ffffff;
+}
+
+ion-input, ion-item {
+    --background: #ffffff;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row;
+}
+.card-input {
+    width: 50%;
+    margin: 10% 0 0 25%;
+    --background: #ffffff;
+}
+.buttons {
+    margin-top: 2%;
+    margin-left: 60%;
+    
+}
+
+ion-button {
+    --background: #71697a;
+    --background-hover: #e4be9e;
+    --background-activated:  #71697a;
+    --background-focused:  #71697a ;
+}
+
+ion-popover {
+    --backdrop-opacity: 0.6;
+    --box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+    --color: white;
+    --width: 450px;
+  }

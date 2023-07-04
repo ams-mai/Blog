@@ -1,0 +1,68 @@
+
+ion-content.background{
+  --background: url(../../assets/logo-bg3.png);
+}
+
+ion-toolbar.outside {
+  --background:#cd4631;
+}
+
+.ion-padding {
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+  display: none;
+}}
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#logo-img {
+  width: 80px;
+}
+
+.home-header{
+  --background:#fbfcff;
+}
+
+ion-button.load-more {
+  --background: #cd4631;
+  --background-hover: #e4be9e;
+  --background-activated:  #cd4631;
+  --background-focused:  #cd4631 ;
+}
+
+ion-button.logout {
+  --background:#f8f2dc;
+  --color: red;
+}
+
+ion-modal {
+  --width: 50%;
+}

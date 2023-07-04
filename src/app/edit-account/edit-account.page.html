@@ -1,0 +1,352 @@
+<ion-backdrop [visible]="true"></ion-backdrop>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar class="outside">
+      <ion-buttons slot="secondary">
+        <ion-menu-button style="color:#f8f2dc;"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button [disabled]="true" fill="solid" class="logout">
+          Logout
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        <img src="/assets/logo-removebg.png" width="100px" style="display:inline-block; margin-top: 1rem;"/>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="background">
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-card>
+            <ion-card-content>
+              <div style="margin-left: 35%; cursor: pointer;">
+                <ion-icon style="margin-right: 2rem;" size="large" id="messages" name="chatbubble"></ion-icon>
+                <ion-icon size="large" id="notifications" name="notifications"></ion-icon>
+              </div>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card>
+            <ion-card-header>
+              <ion-item lines="none">
+                <ion-icon slot="end" name="calendar-outline"></ion-icon>
+                <ion-card-title>Today</ion-card-title>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-card-subtitle>Make everyday matter.</ion-card-subtitle>
+              </ion-item>
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-datetime></ion-datetime>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card>
+            <ion-card-header>
+              <ion-item lines="none">
+                <ion-icon slot="end" name="desktop-outline"></ion-icon>
+                <ion-card-title>Contents Today</ion-card-title>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-card-subtitle>Top searched today: Information Technology</ion-card-subtitle>
+              </ion-item>
+            </ion-card-header>
+            <ion-searchbar style="width: 90%; margin-left: 5%;"></ion-searchbar>
+          
+            <ion-card-content>
+              <ion-list>
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/why-is-it-information-technology-great-career-choice.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>15 Reasons Why IT is a Great Career</h3>
+                    <p>https://www.floridacareercollege.edu/blog/why-the-information-technology-field-is-a-great-career-choice/</p>
+                  </ion-label>   
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/salary-IT.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Salary for Industry: Information Technology (IT) Services</h3>
+                    <p>https://www.payscale.com/research/PH/Industry=Information_Technology_(IT)_Services/Salary</p>
+                  </ion-label> 
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/information-tech.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>21 Different Types of IT Careers To Explore</h3>
+                    <p>https://www.indeed.com/career-advice/finding-a-job/types-of-it-jobs</p>
+                  </ion-label>
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/Skills-IT.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Important Skills for Information Technology (IT) Jobs</h3>
+                    <p>https://www.liveabout.com/list-of-information-technology-it-skills-2062410</p>
+                  </ion-label> 
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/Programming-Language-Popularity.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Top 20 Best Programming Languages To Learn in 2023</h3>
+                    <p>https://www.simplilearn.com/best-programming-languages-start-learning-today-article</p>
+                  </ion-label>  
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/College-IT.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>2023 Best Colleges for Information Technology in America</h3>
+                    <p>https://www.niche.com/colleges/search/best-colleges-for-information-technology/</p>
+                  </ion-label>
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/Information-Technology.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>What Is Information Technology?</h3>
+                    <p>https://www.comptia.org/content/articles/what-is-information-technology</p>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+
+              <ion-list *ngIf="loaded">
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/what-is-information-technology-scaled.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Why IT Fumbles Analytics</h3>
+                    <p>https://hbr.org/2013/01/why-it-fumbles-analytics</p>
+                  </ion-label>
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/larry-alton_1022_tile_250.png" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>Eight Benefits of Seeking a Career in IT</h3>
+                    <p>https://www.isaca.org/resources/news-and-trends/isaca-now-blog/2021/</p>
+                  </ion-label>   
+                </ion-item>
+
+                <ion-item button>
+                  <ion-thumbnail slot="start">
+                    <img src="/assets/Fotolia_44986377.jpg" />
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>7 Advantages of Studying Information Technology</h3>
+                    <p>https://www.coursesonline.co.uk/7-advantages-of-studying-information-technology/</p>
+                  </ion-label> 
+                </ion-item>
+              </ion-list>
+
+              <ion-list *ngIf="!loaded">
+                <ion-item>
+                  <ion-thumbnail slot="start">
+                    <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </h3>
+                    <p>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </p>
+                  </ion-label>
+                </ion-item>
+
+                <ion-item>
+                  <ion-thumbnail slot="start">
+                    <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </h3>
+                    <p>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </p>
+                  </ion-label>   
+                </ion-item>
+                
+                <ion-item>
+                  <ion-thumbnail slot="start">
+                    <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                  </ion-thumbnail>
+                  <ion-label>
+                    <h3>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </h3>
+                    <p>
+                      <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                    </p>
+                  </ion-label>   
+                </ion-item>
+              </ion-list>
+
+              <ion-button (click)="loaded = !loaded" style="margin: 2% 40%;">Load more</ion-button>
+              
+
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="3" >
+          <ion-card>
+            <ion-card-header>
+              <ion-item lines="none">
+                <ion-icon slot="end" name="person-outline"></ion-icon>
+                <ion-card-title>Your Profile</ion-card-title>
+              </ion-item>
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-accordion-group value="second">
+                <ion-accordion value="first" [disabled]="true">
+                  <ion-item slot="header">
+                    <ion-label>Personal Information</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    <ion-item lines="none">
+                      <ion-icon name="id-card" slot="end"></ion-icon>
+                      <ion-label>Juan Dela Cruz</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="calendar-number" slot="end"></ion-icon>
+                      <ion-label>Born in July 2001</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="map" slot="end"></ion-icon>
+                      <ion-label>Lives at Batangas City</ion-label>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-icon name="people" slot="end"></ion-icon>
+                      <ion-label>Member since 2020</ion-label>
+                    </ion-item>
+                    <ion-button fill="clear">Edit Personal Information</ion-button>
+                  </div>
+                </ion-accordion>
+
+                <ion-accordion value="second">
+                  <ion-item slot="header">
+                    <ion-label>Account Information</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    <ion-item lines="none">
+                      <ion-input label="Username:" label-placement="fixed" value="@theJuan"></ion-input>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-input label="Password:" label-placement="fixed" type="password" value="Old-Password"></ion-input>
+                      <ion-button slot="end" id="click-trigger">Edit</ion-button>
+                      <div>
+                        <ion-popover trigger="click-trigger" triggerAction="click">
+                          <ng-template>
+                            <ion-content class="ion-padding">
+                              <ion-list>
+                                <ion-item>
+                                  <ion-input type="email" label="Email" labelPlacement="floating" placeholder="Enter username"></ion-input> <br>
+                                </ion-item>
+                                <ion-item>
+                                  <ion-input type="password" label="New Password" labelPlacement="floating" placeholder="Enter password"></ion-input>
+                                </ion-item>
+                              </ion-list>
+                              <ion-button style="margin: 5% 40%;" (click)="DismissClick()">Verify</ion-button>
+                            </ion-content>
+                          </ng-template>
+                        </ion-popover>
+                      </div>
+                    </ion-item> 
+                    <ion-item lines="none">
+                      <ion-input label="Contact:" type="number" label-placement="fixed" value="09112131111"></ion-input>
+                    </ion-item> 
+                    <ion-item lines="none">
+                      <ion-input label="Email:" type="email" label-placement="fixed" value="thejuan@gmail.com"></ion-input>
+                    </ion-item> 
+                    <ion-item lines="none">
+                      <ion-select label="Profile is visible to:" value="all">
+                        <ion-select-option value="all">all</ion-select-option>
+                        <ion-select-option value="nes">friends</ion-select-option>
+                        <ion-select-option value="n64">no one</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-select label="Profile can be added by:" value="anyone">
+                        <ion-select-option value="anyone">anyone</ion-select-option>
+                        <ion-select-option value="nes">friends of friends</ion-select-option>
+                        <ion-select-option value="n64">no one</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-toggle [enableOnOffLabels]="true" justify="space-between">Profile lock:</ion-toggle>
+                    </ion-item>
+                    <ion-button (click)="goBack()" fill="clear" style="margin-right: 15%;">Save Changes</ion-button>
+                    <ion-button (click)="goBack()" fill="clear">Go Back</ion-button>
+                  </div>
+                </ion-accordion>
+
+                <ion-accordion value="third" [disabled]="true">
+                  <ion-item slot="header">
+                    <ion-label>Settings</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    <ion-item lines="none">
+                      <ion-toggle>Dark Mode</ion-toggle>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-range labelPlacement="fixed" label-placement="start"
+                      aria-label="Range with ticks" [ticks]="true" [snaps]="true" [min]="0" [max]="5">
+                        <div slot="label">Music</div>
+                      </ion-range>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <ion-range labelPlacement="fixed" label-placement="start">
+                        <div slot="label">Sound</div>
+                      </ion-range>
+                    </ion-item>
+                  </div>
+                </ion-accordion>
+              </ion-accordion-group>
+            </ion-card-content>
+
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-content>
+</div>
